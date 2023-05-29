@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Wellnes_darkgreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:backgroundTint="@color/Wellnes_darkgreen"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Calendario interactivo -->
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Spinner con horarios -->
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora:"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <Spinner
+            android:id="@+id/timeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/times"
+            android:prompt="@string/time_prompt"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/reasonLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motivo:"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Radio buttons para método de pago -->
+        <TextView
+            android:id="@+id/paymentLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Método de pago:"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/paymentGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/cardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta"
+                android:textColor="#00AF91"/>
+
+            <RadioButton
+                android:id="@+id/cashButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Efectivo"
+                android:textColor="#00AF91"/>
+
+        </RadioGroup>
+
+        <!-- Botón de siguiente -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Siguiente"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00AF91"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

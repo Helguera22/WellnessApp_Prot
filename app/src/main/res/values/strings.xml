@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">WellnessApp (Prot)</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="ingresa_tu_contrase_a">Ingresa tu contraseña</string>
+    <string name="ingresa_tu_contraseña" />
+    <string name="ingresa_tu_correo">Ingresa tu correo</string>
+    <string name="Ingresa_tu_contraseña" />
+    <string name="Ingresa_tu_correo" />
+    <string name="wellnessapp">WellnessApp</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="olvidaste_tu_contrase_a">Olvidaste tu contraseña?</string>
+    <string name="entrar">Entrar</string>
+    <string name="title_activity_doctor_log">Doctor_log</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="time_prompt">Selecciona una hora</string>
+    <string-array name="times">
+        <item>9:00 a.m. - 10:00 a.m.</item>
+        <item>10:00 a.m. - 11:00 a.m.</item>
+        <item>11:00 a.m. - 12:00 p.m.</item>
+        <item>12:00 p.m. - 1:00 p.m.</item>
+        <item>1:00 p.m. - 2:00 p.m.</item>
+        <item>2:00 p.m. - 3:00 p.m.</item>
+        <item>3:00 p.m. - 4:00 p.m.</item>
+        <item>4:00 p.m. - 5:00 p.m.</item>
+        <item>5:00 p.m. - 6:00 p.m.</item>
+    </string-array>
+    <string name="payment_method_prompt">Selecciona el método de pago:</string>
+    <string name="payment_method_card">Tarjeta</string>
+    <string name="payment_method_cash">Efectivo</string>
+
+</resources>

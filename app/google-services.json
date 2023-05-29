@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "351831482468",
+    "project_id": "wellnessapp-b06c9",
+    "storage_bucket": "wellnessapp-b06c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351831482468:android:3181abf743685e1f4cbf71",
+        "android_client_info": {
+          "package_name": "com.helgar.wellnessapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351831482468-9u8ptk6a6vjilccqj987ilbgpg04evk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4bKOXdzudixLoH_ajZ88jVRFUxkZrx4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351831482468-9u8ptk6a6vjilccqj987ilbgpg04evk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
