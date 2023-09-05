@@ -37,4 +37,16 @@
     <string name="payment_method_card">Tarjeta</string>
     <string name="payment_method_cash">Efectivo</string>
 
+    <string-array name="spinner_GS_array">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <!-- Agrega más elementos aquí -->
+    </string-array>
+
 </resources>

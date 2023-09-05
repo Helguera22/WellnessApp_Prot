@@ -26,7 +26,6 @@ import javax.crypto.spec.SecretKeySpec
 
 class UserLog : AppCompatActivity() {
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_log)
@@ -36,6 +35,16 @@ class UserLog : AppCompatActivity() {
         val btn_entrar = findViewById<Button>(R.id.button_entrar)
         val btnregister = findViewById<TextView>(R.id.textViewreg)
 
+        // Verificar si hay una sesión activa antes de iniciar sesión
+        val sharedPreferences = getSharedPreferences("Session", MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+
+        if (isLoggedIn == true) {
+            val intent = Intent(this, MainUser1::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         btn_entrar.setOnClickListener {
             val correo = edt_correo.text.toString().trim()
             val password = edt_password.text.toString().trim()
@@ -44,10 +53,9 @@ class UserLog : AppCompatActivity() {
             if (correo.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Por favor complete todos los campos", Toast.LENGTH_SHORT).show()
             } else {
-
                 // Enviar los datos al servidor utilizando Volley
                 val queue = Volley.newRequestQueue(this)
-                val url = "http://192.168.0.110:8080/wellnessappDb/userLogin.php"
+                val url = "http://ictuscorps.atwebpages.com/anime-main/php/userLogin.php"
 
                 val request = object : StringRequest(
                     Request.Method.POST, url,
@@ -56,7 +64,15 @@ class UserLog : AppCompatActivity() {
 
                         if (response == "Todo está correctoInicio de sesión exitoso") {
                             // Inicio de sesión exitoso
+
+                            // Guardar el estado de la sesión en las SharedPreferences
+                            val editor = sharedPreferences.edit()
+                            editor.putBoolean("isLoggedIn", true)
+                            editor.apply()
+
+                            // Redirigir a la actividad principal
                             val intent = Intent(this, MainUser1::class.java)
+                            intent.putExtra("user_email", correo) // Pasamos el correo a la siguiente actividad
                             startActivity(intent)
                             finish()
                         } else {
@@ -71,7 +87,7 @@ class UserLog : AppCompatActivity() {
                     override fun getParams(): Map<String, String> {
                         val params = HashMap<String, String>()
                         params["correo_electronico"] = correo
-                        params["psw"] = password // Utiliza la contraseña desencriptada
+                        params["psw"] = password
                         return params
                     }
                 }

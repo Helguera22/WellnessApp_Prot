@@ -63,7 +63,7 @@ class UserRegister : AppCompatActivity() {
             } else {
                 // Enviar los datos al servidor utilizando Volley
                 val queue = Volley.newRequestQueue(this)
-                val url = "http://192.168.0.110:8080/wellnessappDb/userRegister.php"
+                val url = "http://ictuscorps.atwebpages.com/anime-main/php/userLogin.php"
 
                 val request = object : StringRequest(Request.Method.POST, url,
                     Response.Listener { response ->

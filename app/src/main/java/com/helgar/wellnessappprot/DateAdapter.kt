@@ -4,9 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.helgar.wellnessappprot.databinding.DateItemRowsBinding
-import com.helgar.wellnessappprot.databinding.DoctorItemRowsBinding
+import com.helgar.wellnessappprot.dataclasses.Cita
 
 class DateAdapter(private val context: Context): RecyclerView.Adapter<DateAdapter.MainViewHolder>() {
 
@@ -45,7 +44,7 @@ class DateAdapter(private val context: Context): RecyclerView.Adapter<DateAdapte
 
     inner class MainViewHolder(private val binding: DateItemRowsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindView(cita:Cita) {
+        fun bindView(cita: Cita) {
             binding.txtName.text = cita.nombre_completo
             binding.txtReason.text = cita.nota
             binding.txtDate.text = cita.hora

@@ -8,7 +8,7 @@
     android:background="#162534"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="7attr/selectableItemBackgroundBorderless"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -25,6 +25,6 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:text="Paciente"
-        android:textApparinece="@style/TextApparience.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </LinearLayout>

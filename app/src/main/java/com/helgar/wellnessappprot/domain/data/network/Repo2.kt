@@ -7,8 +7,7 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
-import com.helgar.wellnessappprot.Cita
-import com.helgar.wellnessappprot.Doctor
+import com.helgar.wellnessappprot.dataclasses.Cita
 import org.json.JSONArray
 import org.json.JSONException
 
@@ -19,10 +18,11 @@ class Repo2(private val context: Context) {
     fun getDateData(): LiveData<MutableList<Cita>> {
         val mutableData = MutableLiveData<MutableList<Cita>>()
 
-        val url = "http://192.168.15.124:8080/wellnessappDb/obtener_citas.php"
+        val url = "http://ictuscorps.atwebpages.com/anime-main/php/obtener_citas.php"
 
         // Crear una nueva solicitud Volley
         val jsonArrayRequest = JsonArrayRequest(
+
             Request.Method.GET, url, null,
             { response: JSONArray ->
                 val listData = mutableListOf<Cita>()

@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item
-            android:id="@+id/nav_item_one"
-            android:icon="@drawable/baseline_add_card_24"
-            android:title="WellCard"/>
+            android:id="@+id/nav_item_one1"
+            android:icon="@drawable/baseline_folder_shared_24"
+            android:title="Pacientes"/>
         <item
-            android:id="@+id/nav_item_two"
+            android:id="@+id/nav_item_two1"
             android:icon="@drawable/baseline_calendar_month_24"
             android:title="Pendientes"/>
         <item
-            android:id="@+id/nav_item_three"
+            android:id="@+id/nav_item_three1"
             android:icon="@drawable/baseline_analytics_24"
-            android:title="Análisis clínicos"/>
+            android:title="Administrador"/>
     </group>
 
     <item android:title="Editar">
         <menu>
             <item
-                android:id="@+id/nav_item_six"
+                android:id="@+id/nav_item_six1"
                 android:icon="@drawable/round_construction_24"
                 android:title="Configuración"/>
             <item
-                android:id="@+id/nav_item_seven"
+                android:id="@+id/nav_item_seven1"
                 android:icon="@drawable/baseline_logout_24"
                 android:title="Cerrar sesión"/>
         </menu>

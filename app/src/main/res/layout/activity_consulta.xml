@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00AF91">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Encabezado -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consulta en curso"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:padding="25dp"/>
+
+        <!-- Contenedor de la imagen y la información -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Imagen -->
+
+            <!-- Información -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/image3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nss:"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/txtNSS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="1234567890"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cédula profesional:"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/editTextCedulaProfesional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FFFFFF"
+                    android:text="12345678"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha:"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/editTextFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="22/08/2023"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Captura de datos adicionales -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Temperatura:"/>
+
+        <EditText
+            android:id="@+id/editTextTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:hint="Capturar Temperatura" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Presión:"/>
+
+        <EditText
+            android:id="@+id/editTextPresion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:hint="Capturar Presión" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Oxigenación:"/>
+
+        <EditText
+            android:id="@+id/editTextOxigenacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:hint="Capturar Oxigenación" />
+
+        <TextView
+            android:id="@+id/sintomas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="Síntomas:"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sintomas">
+
+            <!-- TextView y Spinner en la misma fila -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewSint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_box_bg"
+                        android:paddingStart="27dp"
+                        android:paddingEnd="16dp"
+                        android:hint="Buscar..."
+                        android:dropDownAnchor="@id/autoCompleteTextViewSint"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/ic_search" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupSint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/enfermedades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="Enfermedades:"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutEnf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sintomas">
+
+            <!-- TextView y Spinner en la misma fila -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="20dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewEnf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_box_bg"
+                        android:paddingStart="27dp"
+                        android:paddingEnd="16dp"
+                        android:hint="Buscar..."
+                        android:dropDownAnchor="@id/autoCompleteTextViewEnf"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:src="@drawable/ic_search" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupEnf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonDiag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:text="Diagnóstico"/>
+
+    </LinearLayout>
+</ScrollView>

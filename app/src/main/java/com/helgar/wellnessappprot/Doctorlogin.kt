@@ -35,7 +35,7 @@ class Doctorlogin : AppCompatActivity() {
             } else {
                 // Enviar los datos al servidor utilizando Volley
                 val queue = Volley.newRequestQueue(this)
-                val url = "http://192.168.15.124:8080/wellnessappDb/docLogin.php"
+                val url = "http://ictuscorps.atwebpages.com/anime-main/php/docLogin.php"
 
                 val request = object : StringRequest(Request.Method.POST, url,
                     Response.Listener { response ->
@@ -64,6 +64,8 @@ class Doctorlogin : AppCompatActivity() {
                 }
                 queue.add(request)
             }
+            /*val intent = Intent(this, MainDoctor1::class.java)
+            startActivity(intent)*/
         }
 
         btnregister.setOnClickListener {

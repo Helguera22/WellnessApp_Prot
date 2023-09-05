@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="ui.MainUser1">
+    tools:context="ui.MainDoctor1">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:fitsSystemWindows="true">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_user"
+            android:id="@+id/toolbar_doctor"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#00AF91"

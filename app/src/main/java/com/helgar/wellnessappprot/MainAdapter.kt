@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.helgar.wellnessappprot.databinding.DoctorItemRowsBinding
-import com.helgar.wellnessappprot.ui.MainUser1
+import com.helgar.wellnessappprot.dataclasses.Doctor
 
 class MainAdapter(private val context: Context): RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
@@ -45,7 +45,7 @@ class MainAdapter(private val context: Context): RecyclerView.Adapter<MainAdapte
 
     inner class MainViewHolder(private val binding: DoctorItemRowsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindView(doctor:Doctor) {
+        fun bindView(doctor: Doctor) {
             Glide.with(context).load(doctor.imageUrl).into(binding.circleimageview)
             binding.txtTitle.text = doctor.nombre_completo
             binding.txtDescr.text = doctor.especialidad

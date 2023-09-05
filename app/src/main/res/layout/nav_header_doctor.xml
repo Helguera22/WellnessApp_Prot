@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/user_header"
+    android:id="@+id/doctor_header"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -8,22 +8,23 @@
     android:background="#162534"
     android:clickable="true"
     android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/nav_header_image"
+        android:id="@+id/nav_header_image1"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@mipmap/ic_launcher" />
-    
+
     <TextView
-        android:id="@+id/nav_header_textview"
+        android:id="@+id/nav_header_textview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
-        android:text="Paciente"
+        android:text="Doctor"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </LinearLayout>
